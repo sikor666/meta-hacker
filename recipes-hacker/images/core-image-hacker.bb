@@ -8,13 +8,12 @@ require recipes-filesystems/images/meta-filesystems-image.bb
 
 DESCRIPTION = "A master image to be deployed on a target useful for testing other images"
 
-IMAGE_FEATURES += "splash ssh-server-openssh package-management"
+IMAGE_FEATURES += "ssh-server-openssh package-management"
 
 IMAGE_INSTALL += "\
     packagegroup-base \
     packagegroup-core-buildessential \
-    packagegroup-core-full-cmdline \
-    packagegroup-core-ssh-openssh \
+    packagegroup-core-nfs-server \
     "
 
 # Now add the hacker packages we want to install
@@ -31,9 +30,26 @@ IMAGE_INSTALL += "base-files"
 IMAGE_INSTALL += "bash"
 IMAGE_INSTALL += "bash-completion"
 
+# Dev
 IMAGE_INSTALL += "gcc"
 IMAGE_INSTALL += "git"
+IMAGE_INSTALL += "git-perltools"
 IMAGE_INSTALL += "vim"
+IMAGE_INSTALL += "cmake"
+
+# Game
+# IMAGE_INSTALL += "vc-graphics"
+IMAGE_INSTALL += "libsdl2-dev"
+IMAGE_INSTALL += "glm-dev"
+# IMAGE_INSTALL += "mesa-dev"
+# IMAGE_INSTALL += "libgl-mesa-dev"
+# IMAGE_INSTALL += "libegl-mesa-dev"
+# IMAGE_INSTALL += "libgles1-mesa-dev"
+# IMAGE_INSTALL += "libgles2-mesa-dev"
+# IMAGE_INSTALL += "libgles3-mesa-dev"
+# IMAGE_INSTALL += "libglapi-dev"
+# IMAGE_INSTALL += "directfb-dev"
+# IMAGE_INSTALL += "directfb-examples-dev"
 
 # Set as depends in other receipe
 # IMAGE_INSTALL += "bluez5"
