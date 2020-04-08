@@ -13,7 +13,6 @@ IMAGE_FEATURES += "ssh-server-openssh package-management"
 IMAGE_INSTALL += "\
     packagegroup-base \
     packagegroup-core-buildessential \
-    packagegroup-core-nfs-server \
     "
 
 # Now add the hacker packages we want to install
