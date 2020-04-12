@@ -5,6 +5,7 @@
 # First include a base image to base things off
 require recipes-core/images/core-image-minimal.bb
 require recipes-filesystems/images/meta-filesystems-image.bb
+# require recipes-graphics/images/core-image-weston.bb
 
 DESCRIPTION = "A master image to be deployed on a target useful for testing other images"
 
@@ -35,10 +36,11 @@ IMAGE_INSTALL += "git"
 IMAGE_INSTALL += "git-perltools"
 IMAGE_INSTALL += "vim"
 IMAGE_INSTALL += "cmake"
+IMAGE_INSTALL += "rsync"
 
 # Game
 # IMAGE_INSTALL += "vc-graphics"
-IMAGE_INSTALL += "libsdl2-dev"
+# IMAGE_INSTALL += "libsdl2-dev"
 IMAGE_INSTALL += "glm-dev"
 # IMAGE_INSTALL += "mesa-dev"
 # IMAGE_INSTALL += "libgl-mesa-dev"
