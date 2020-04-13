@@ -3,12 +3,13 @@
 #
 
 # First include a base image to base things off
-require recipes-core/images/core-image-minimal.bb
+# require recipes-core/images/core-image-minimal.bb
+require recipes-graphics/images/core-image-weston.bb
 require recipes-filesystems/images/meta-filesystems-image.bb
 
 DESCRIPTION = "A master image to be deployed on a target useful for testing other images"
 
-IMAGE_FEATURES += "ssh-server-openssh package-management"
+IMAGE_FEATURES += "package-management"
 
 IMAGE_INSTALL += "\
     packagegroup-base \
@@ -35,13 +36,14 @@ IMAGE_INSTALL += "git"
 IMAGE_INSTALL += "git-perltools"
 IMAGE_INSTALL += "vim"
 IMAGE_INSTALL += "cmake"
+IMAGE_INSTALL += "rsync"
 
 # Game
 # IMAGE_INSTALL += "vc-graphics"
-IMAGE_INSTALL += "libsdl2-dev"
+# IMAGE_INSTALL += "libsdl2-dev"
+# IMAGE_INSTALL += "glfw"
 IMAGE_INSTALL += "glm-dev"
-# IMAGE_INSTALL += "mesa-dev"
-# IMAGE_INSTALL += "libgl-mesa-dev"
+IMAGE_INSTALL += "libgl-mesa-dev"
 # IMAGE_INSTALL += "libegl-mesa-dev"
 # IMAGE_INSTALL += "libgles1-mesa-dev"
 # IMAGE_INSTALL += "libgles2-mesa-dev"
@@ -49,6 +51,12 @@ IMAGE_INSTALL += "glm-dev"
 # IMAGE_INSTALL += "libglapi-dev"
 # IMAGE_INSTALL += "directfb-dev"
 # IMAGE_INSTALL += "directfb-examples-dev"
+
+IMAGE_INSTALL += "libinput"
+IMAGE_INSTALL += "wayland"
+IMAGE_INSTALL += "wayland-protocols"
+IMAGE_INSTALL += "weston"
+IMAGE_INSTALL += "weston-init"
 
 # Set as depends in other receipe
 # IMAGE_INSTALL += "bluez5"
