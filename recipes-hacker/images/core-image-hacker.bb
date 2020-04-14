@@ -39,6 +39,7 @@ IMAGE_INSTALL += "cmake"
 IMAGE_INSTALL += "rsync"
 
 # Game
+IMAGE_INSTALL += "userland-dev"
 # IMAGE_INSTALL += "vc-graphics"
 # IMAGE_INSTALL += "libsdl2-dev"
 IMAGE_INSTALL += "glm-dev"
