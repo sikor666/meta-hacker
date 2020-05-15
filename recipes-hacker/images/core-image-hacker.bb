@@ -17,10 +17,10 @@ IMAGE_INSTALL += "\
     "
 
 # Now add the hacker packages we want to install
-IMAGE_INSTALL += "apt"
-IMAGE_INSTALL += "gnupg"
-IMAGE_INSTALL += "coreutils"
-IMAGE_INSTALL += "util-linux"
+# IMAGE_INSTALL += "apt"
+# IMAGE_INSTALL += "gnupg"
+# IMAGE_INSTALL += "coreutils"
+# IMAGE_INSTALL += "util-linux"
 
 IMAGE_INSTALL += "e2fsprogs-resize2fs"
 IMAGE_INSTALL += "e2fsprogs-mke2fs"
@@ -42,7 +42,7 @@ IMAGE_INSTALL += "rsync"
 IMAGE_INSTALL += "userland-dev"
 # IMAGE_INSTALL += "vc-graphics"
 # IMAGE_INSTALL += "libsdl2-dev"
-IMAGE_INSTALL += "glm-dev"
+# IMAGE_INSTALL += "glm-dev"
 # IMAGE_INSTALL += "mesa-dev"
 # IMAGE_INSTALL += "libgl-mesa-dev"
 # IMAGE_INSTALL += "libegl-mesa-dev"
